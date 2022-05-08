@@ -1,0 +1,2 @@
+guru/qa/FilesParsingTet.java
+ guru.qa.FilesParsingTet
