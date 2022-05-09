@@ -21,14 +21,13 @@ import java.util.zip.ZipInputStream;
 import static org.hamcrest.MatcherAssert.assertThat;
 
 
-
 public class FilesParsingTet {
     ClassLoader classLoader = getClass().getClassLoader();
 
     @Test
     void zipTest() throws Exception {
         ZipFile zf = new ZipFile(new File("src/test/resources/files/zip/examples.zip"));
-        ZipInputStream is =  new ZipInputStream(Objects.requireNonNull(classLoader.getResourceAsStream("files/zip/examples.zip")));
+        ZipInputStream is = new ZipInputStream(Objects.requireNonNull(classLoader.getResourceAsStream("files/zip/examples.zip")));
         ZipEntry entry;
         while ((entry = is.getNextEntry()) != null) {
 
@@ -38,7 +37,7 @@ public class FilesParsingTet {
                 System.out.println("file : " + entry.getName());
             }
 
-            if (entry.getName().equals("csv/CVS-example.csv")) {
+             if (entry.getName().equals("csv/CVS-example.csv")) {
                 try (InputStream inputStream = zf.getInputStream(entry)) {
                     CSVReader csvReader = new CSVReader(
                             new InputStreamReader(inputStream, StandardCharsets.UTF_8));
@@ -51,18 +50,16 @@ public class FilesParsingTet {
                             new String[]{"Econmic", "Environment"});
                 }
 
-            }
-
-            if (entry.getName().equals("pdf/pdf_example.pdf")) {
+            } else if (entry.getName().equals("pdf/pdf_example.pdf")) {
                 try (InputStream inputStream = zf.getInputStream(entry)) {
                     PDF pdf = new PDF(inputStream);
 
-                    Assertions.assertThat( pdf.numberOfPages).isEqualTo(2);
+                    Assertions.assertThat(pdf.numberOfPages).isEqualTo(2);
                     assertThat(pdf, new ContainsExactText("PDF File"));
                 }
             }
 
-            if (entry.getName().equals("xlsx/xls_example.xls")) {
+            else if (entry.getName().equals("xlsx/xls_example.xls")) {
                 try (InputStream inputStream = zf.getInputStream(entry)) {
                     XLS xls = new XLS(inputStream);
 
