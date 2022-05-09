@@ -32,6 +32,12 @@ public class FilesParsingTet {
         ZipEntry entry;
         while ((entry = is.getNextEntry()) != null) {
 
+            if (entry.isDirectory()) {
+                System.out.println("dir  : " + entry.getName());
+            } else {
+                System.out.println("file : " + entry.getName());
+            }
+
             if (entry.getName().equals("csv/CVS-example.csv")) {
                 try (InputStream inputStream = zf.getInputStream(entry)) {
                     CSVReader csvReader = new CSVReader(
@@ -40,9 +46,9 @@ public class FilesParsingTet {
                     List<String[]> content = csvReader.readAll();
 
                     Assertions.assertThat(content).contains(
-                            new String[]{"", "", ""},
-                            new String[]{"", "", ""},
-                            new String[]{"", "", ""});
+                            new String[]{"ANZSIC", "DataInfo"},
+                            new String[]{"Energy", "Transport"},
+                            new String[]{"Econmic", "Environment"});
                 }
 
             }
@@ -61,11 +67,10 @@ public class FilesParsingTet {
                     XLS xls = new XLS(inputStream);
 
                     String value = xls.excel.getSheetAt(0).getRow(2).getCell(4).getStringCellValue();
-                    Assertions.assertThat(value).contains();
+                    Assertions.assertThat(value).contains("Hashimoto");
                 }
 
             }
         }
-        System.out.println();
     }
 }

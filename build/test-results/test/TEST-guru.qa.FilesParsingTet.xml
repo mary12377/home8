@@ -1,8 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="guru.qa.FilesParsingTet" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-05-08T17:36:22" hostname="DESKTOP-83LEQ1P" time="0.03">
+<testsuite name="guru.qa.FilesParsingTet" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-05-09T10:14:08" hostname="DESKTOP-83LEQ1P" time="0.031">
   <properties/>
-  <testcase name="zipTest()" classname="guru.qa.FilesParsingTet" time="0.03"/>
-  <system-out><![CDATA[Р’СЃРµ С‚РµСЃС‚С‹ СЂР°Р±РѕС‚Р°СЋС‚.
+  <testcase name="zipTest()" classname="guru.qa.FilesParsingTet" time="0.031"/>
+  <system-out><![CDATA[dir  : p01_blink/
+file : p01_blink/p01_blink.ino
+dir  : p02_blink/
+file : p02_blink/p02_blink.ino
+dir  : p02_morse/
+file : p02_morse/p02_morse.ino
+dir  : p03_railroad/
+file : p03_railroad/p03_railroad.ino
+dir  : p04_morse/
+file : p04_morse/p04_morse.ino
+dir  : p05_morse/
+file : p05_morse/p05_morse.ino
+dir  : p05_morse_buzzer/
+file : p05_morse_buzzer/p05_morse_buzzer.ino
+dir  : p06_led_fade/
+file : p06_led_fade/p06_led_fade.ino
+dir  : p06_rainbow/
+file : p06_rainbow/p06_rainbow.ino
+dir  : p07_tilt/
+file : p07_tilt/p07_tilt.ino
+dir  : p08_push_light/
+file : p08_push_light/p08_push_light.ino
+dir  : p08_toggle_light/
+file : p08_toggle_light/p08_toggle_light.ino
+dir  : p08_toggle_light_debounce/
+file : p08_toggle_light_debounce/p08_toggle_light_debounce.ino
+dir  : p09_ldr_light/
+file : p09_ldr_light/p09_ldr_light.ino
+dir  : p09_pot_light/
+file : p09_pot_light/p09_pot_light.ino
+dir  : p09_thermistor_light/
+file : p09_thermistor_light/p09_thermistor_light.ino
+dir  : p10_7_segment/
+file : p10_7_segment/p10_7_segment.ino
+dir  : p10_7_segment_count/
+file : p10_7_segment_count/p10_7_segment_count.ino
+dir  : p11_counter/
+file : p11_counter/p11_counter.ino
+dir  : p11_numbers/
+file : p11_numbers/p11_numbers.ino
+dir  : p12_lcd_hello/
+file : p12_lcd_hello/p12_lcd_hello.ino
+dir  : p12_lcd_ru/
+file : p12_lcd_ru/p12_lcd_ru.ino
+dir  : p13_serial_hello/
+file : p13_serial_hello/p13_serial_hello.ino
+dir  : p13_serial_morse/
+file : p13_serial_morse/p13_serial_morse.ino
+dir  : p14_servo_sweep/
+file : p14_servo_sweep/p14_servo_sweep.ino
+dir  : p15_motor_flipflop/
+file : p15_motor_flipflop/p15_motor_flipflop.ino
+dir  : p15_motor_pwm/
+file : p15_motor_pwm/p15_motor_pwm.ino
+dir  : p16_forward/
+file : p16_forward/p16_forward.ino
+dir  : p16_spin_left/
+file : p16_spin_left/p16_spin_left.ino
+dir  : p17_line_follower/
+file : p17_line_follower/p17_line_follower.ino
+dir  : p17_platform_funcs/
+file : p17_platform_funcs/p17_platform_funcs.ino
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
